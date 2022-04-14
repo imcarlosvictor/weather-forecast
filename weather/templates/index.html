@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!-- Form -->
+  <div class="inputs">
+    <p id="title-bar">5-Day Forecast</p>
+    <form action="" method="post" class="form-input">
+      {% csrf_token %}
+      <div class="input-group">
+        <!-- Search for city -->
+        <input type="text" class="txt-field city-search" name="city" placeholder="City">
+        <!-- Search country code -->
+        <input type="text" class="txt-field country-search" name="country-code" placeholder="Country code">
+        <!-- Search button -->
+        <div class="input-group-btn">
+          <button class="btn-search" type="submit">Search</button>
+        </div>
+      </div>
+      <form>
+  </div>
+
+  <div class="content">
+    <!-- Active forecast -->
+    <div id="location-info">
+      {% if location %}
+      <h2>{{location.city}}, {{location.country}}</h2>
+      {% else %}
+      <div id="no-result">no result</div>
+      {% endif %}
+    </div>
+    <!-- 5-Day Forecast -->
+    <div class="week-forecast">
+      {% if forecasts %}
+      {% for forecast in forecasts %}
+      <div class="forecasts">
+        <p id="day">{{forecast.day}}</p>
+        <p id="date">{{forecast.date}}</p>
+        <img src="http://openweathermap.org/img/w/{{forecast.icon}}.png">
+        <p id="desc-info">{{forecast.description}}</p>
+        <div class="separator-data"></div>
+        <p id="temp"><span class="text">Temperature:</span> {{forecast.temp}}°C</p>
+        <p id="feels"><span class="text">Feels Like:</span> {{forecast.feels_like}}°C</p>
+        <p><span class="text">High:</span> {{forecast.high}}°C</p>
+        <p><span class="text">Low:</span> {{forecast.low}}°C</p>
+        <p><span class="text">Clouds:</span> {{forecast.clouds}}%</p>
+        <p><span class="text">Precipitation:</span> {{forecast.pop}}%</p>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</body>
+
+</html>
