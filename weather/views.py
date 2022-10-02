@@ -9,6 +9,9 @@ from .models import Forecast
 
 # Create your views here.
 def index(request):
+    city = ''
+    location = []
+    forecasts = []
 
     if request.method == 'POST':
         try:
@@ -62,4 +65,5 @@ def index(request):
             location = []
             forecasts = []
     
-    return render(request, 'index.html', {'city':city, 'location':location, 'forecasts': forecasts})
+    context = {'city': city, 'location': location, 'forecasts': forecasts}
+    return render(request, 'index.html', context)

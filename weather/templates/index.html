@@ -39,21 +39,21 @@
     <!-- 5-Day Forecast -->
     <div class="week-forecast">
       {% if forecasts %}
-      {% for forecast in forecasts %}
-      <div class="forecasts">
-        <p id="day">{{forecast.day}}</p>
-        <p id="date">{{forecast.date}}</p>
-        <img src="http://openweathermap.org/img/w/{{forecast.icon}}.png">
-        <p id="desc-info">{{forecast.description}}</p>
-        <div class="separator-data"></div>
-        <p id="temp"><span class="text">Temperature:</span> {{forecast.temp}}°C</p>
-        <p id="feels"><span class="text">Feels Like:</span> {{forecast.feels_like}}°C</p>
-        <p><span class="text">High:</span> {{forecast.high}}°C</p>
-        <p><span class="text">Low:</span> {{forecast.low}}°C</p>
-        <p><span class="text">Clouds:</span> {{forecast.clouds}}%</p>
-        <p><span class="text">Precipitation:</span> {{forecast.pop}}%</p>
-      </div>
-      {% endfor %}
+        {% for forecast in forecasts %}
+          <div class="forecasts">
+            <p id="day">{{forecast.day}}</p>
+            <p id="date">{{forecast.date}}</p>
+            <img src="http://openweathermap.org/img/w/{{forecast.icon}}.png">
+            <p id="desc-info">{{forecast.description}}</p>
+            <div class="separator-data"></div>
+            <p id="temp"><span class="text">Temperature:</span> {{forecast.temp}}°C</p>
+            <p id="feels"><span class="text">Feels Like:</span> {{forecast.feels_like}}°C</p>
+            <p><span class="text">High:</span> {{forecast.high}}°C</p>
+            <p><span class="text">Low:</span> {{forecast.low}}°C</p>
+            <p><span class="text">Clouds:</span> {{forecast.clouds}}%</p>
+            <p><span class="text">Precipitation:</span> {{forecast.pop}}%</p>
+          </div>
+        {% endfor %}
       {% endif %}
     </div>
   </div>

@@ -101,6 +101,7 @@ body {
     display: flex;
     justify-content: center;
     grid-row: -1;
+    width: 100%;
 }
 
 .forecasts {
