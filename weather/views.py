@@ -29,7 +29,7 @@ def index(request):
             # Grab weather for the next 7 days
             forecast_5_url = f"http://api.openweathermap.org/data/2.5/forecast?lat={geocode_data['lat']}&lon={geocode_data['lon']}&units=metric&appid={api_key}"
             json_data = requests.get(forecast_5_url).json()
-            
+
             # Get the date for the next 5 days
             today = date.today()
 
@@ -57,13 +57,13 @@ def index(request):
                 day.clouds = str(json_data['list'][i]['clouds']['all'])
                 day.pop = math.ceil(float(json_data['list'][i]['pop'])*100)
                 forecasts.append(day)
-                
+
                 # Reset date
                 today = date.today()
         except KeyError:
             city = ''
             location = []
             forecasts = []
-    
+
     context = {'city': city, 'location': location, 'forecasts': forecasts}
     return render(request, 'index.html', context)
