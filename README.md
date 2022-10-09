@@ -1,9 +1,11 @@
 # <div align="center">Weather Weekly Forecast</div>
-A simple web application that uses OpenWeather API to query the weather data for the current week for any city.
-![Weather_API_Project_Example.png](https://github.com/imcvlucas/Weather_Weekly_Forecast/blob/main/images/Weather_API_Project_Example.png "Weather_API_Project_Example.png"))
+A web application that fetches the weather data for the current week for the city specified. Simply enter the city and the country code.
+
+
+![Weather_API_Project_Example.png](https://github.com/imcvlucas/Weather_Weekly_Forecast/blob/main/images/Weather_API_Project_Example.png "Weather_API_Project_Example.png")
 
 ## Key Features
-- OpenWeather API
+- [OpenWeatherAPI](https://openweathermap.org/guide)
 
 ## Learning Outcome
 - Creating a website using django
