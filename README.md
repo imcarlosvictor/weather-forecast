@@ -9,5 +9,5 @@ A web application that fetches the weather data for the current week for the cit
 
 ## Learning Outcome
 - Creating a website using django
-- Fetching and displaying data from and API
+- Fetching data from OpenWeatherAPI and displaying data to Streamlit
 - Deploying a project to Heroku
