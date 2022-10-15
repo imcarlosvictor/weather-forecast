@@ -1,5 +1,5 @@
 # <div align="center">Weather Weekly Forecast</div>
-A web application that fetches the weather data for the current week for the city specified. Simply enter the city and the country code.
+A web application that fetches the weather data for the current week for any city.
 
 
 ![Weather_API_Project_Example.png](https://github.com/imcvlucas/Weather_Weekly_Forecast/blob/main/images/Weather_API_Project_Example.png "Weather_API_Project_Example.png")
