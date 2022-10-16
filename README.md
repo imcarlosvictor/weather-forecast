@@ -1,4 +1,4 @@
-# <div align="center">Weather Weekly Forecast</div>
+# <div align="center">Weather Forecast</div>
 A web application that fetches the weather data for the current week for any city.
 
 
