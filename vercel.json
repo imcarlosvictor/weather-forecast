@@ -9,7 +9,7 @@
 "routes": [ 
 { 
 "src": "/(.*)", 
-"dest": "/weather/templates/index.html" 
+"dest": "weatherdetector/wsgi.py" 
 } 
  ] 
 }
